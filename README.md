@@ -20,4 +20,4 @@ Basic : `docker run -P -d  gudaoxuri/base_ssh:latest`
 
 ## Docker Hub
 
-https://hub.docker.com/r/gudaoxuri/base_ssh/
+https://hub.docker.com/r/gudaoxuri/ssh/
