@@ -16,7 +16,7 @@ Port: 22 User: root Password: 123456
 
 ## Examples
 
-Basic : `docker run -P -d  gudaoxuri/base_ssh:latest`
+Basic : `docker run -P -d  gudaoxuri/ssh:latest`
 
 ## Docker Hub
 
