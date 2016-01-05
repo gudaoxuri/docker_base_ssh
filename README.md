@@ -1,7 +1,7 @@
 Basic Environment
 ===
 
-**Based CentOS 7**
+**Based CentOS 6.6**
 
 ## Feature
 1. Install SSH server & client
