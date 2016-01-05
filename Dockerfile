@@ -1,10 +1,10 @@
-FROM centos:latest
+FROM centos:6.6
 MAINTAINER gudaoxuri
 
 #---------------Use 163 mirrors---------------
 RUN yum install -y wget &&\
     mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup && \
-    wget -P /etc/yum.repos.d/ http://mirrors.163.com/.help/CentOS7-Base-163.repo && \
+    wget -P /etc/yum.repos.d/ http://mirrors.163.com/.help/CentOS6-Base-163.repo && \
     yum clean all && \
     yum makecache
 
