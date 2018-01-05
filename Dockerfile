@@ -11,7 +11,7 @@ RUN yum install -y sed curl tar gcc gcc-c++ make git passwd sudo
 #---------------Modify Time Zone---------------
 ENV TZ "Asia/Shanghai"
 ENV TERM xterm
-k
+
 RUN yum install -y ntpdate  && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
