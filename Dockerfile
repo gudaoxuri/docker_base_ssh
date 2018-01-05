@@ -11,13 +11,9 @@ RUN yum install -y sed curl tar gcc gcc-c++ make git passwd sudo
 #---------------Modify Time Zone---------------
 ENV TZ "Asia/Shanghai"
 ENV TERM xterm
-
+k
 RUN yum install -y ntpdate  && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
-#---------------Support Chinese---------------
-#RUN yum groupinstall -y "Fonts"  && \
-#    echo "LANG=\"zh_CN.UTF-8\"" >> /etc/sysconfig/i18n
 
 #---------------Install SSH---------------
 RUN yum install -y openssh-server openssh-clients  && \
@@ -26,6 +22,9 @@ RUN yum install -y openssh-server openssh-clients  && \
     ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key  && \
     ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key  && \
     mkdir /var/run/sshd
+
+RUN echo "Host *" >> /etc/ssh/ssh_config
+RUN echo " StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 
 #---------------Setting Common Path---------------
 RUN chmod 777 -R /opt/  && \
